@@ -1,0 +1,20 @@
+/*Root font-size*/
+$root-baseline: 10;
+
+/*Root font-size*/
+$body-baseline: 16;
+
+/*Breakpoints*/
+$breakpoints: (phone: 320px, tablet: 768px, desktop: 1366px);
+
+/*Screen sizes*/
+/* -for root (rem/vw) calc- */
+$screen-mobile-baseline: 320;
+$screen-tablet-baseline: 768;
+$screen-desktop-baseline: 1920;
+
+/*Fonts*/
+$font-fallback: sans-serif, Helvetica, Arial;
+
+/*Bootstrap vars*/
+$font-family-base: $font-fallback;

@@ -1,0 +1,127 @@
+html {
+    @include media(">=phone", "<tablet") {
+        font-size: vw($screen-mobile-baseline);
+    }
+    @include media(">=tablet", "<desktop") {
+        font-size: vw($screen-tablet-baseline);
+    }
+    @include media(">=desktop") {
+        font-size: vw($screen-desktop-baseline);
+    }
+}
+
+body {
+    color: $white;
+    font-size: rem($body-baseline);
+    background-color: #171717;
+}
+
+main {
+    .fully-scaled {
+        width: rem(375);
+        height: auto;
+        margin: rem(20) auto;
+
+        @include media(">=tablet") {
+            width: rem(750);
+
+            @include media(">=desktop") {
+                width: rem(1500);
+            }
+        }
+
+        .some-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .list-item {
+                width: rem(93.75);
+                height: rem(93.75);
+                border: rem(1) solid $white;
+                display: flex;
+
+                @include media(">=tablet") {
+                    width: rem(187.5);
+                    height: rem(187.5);
+        
+                    @include media(">=desktop") {
+                        width: rem(375);
+                        height: rem(375);
+                    }
+                }
+
+                span {
+                    margin: auto;
+                    font-size: em(25);
+
+                    @include media(">=tablet") {
+                        font-size: em(50);
+            
+                        @include media(">=desktop") {
+                            font-size: em(100);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .scaling-collapsing {
+        width: rem(375);
+        height: auto;
+        margin: rem(20) auto;
+
+        @include media(">=tablet") {
+            width: rem(750);
+
+            @include media(">=desktop") {
+                width: rem(1500);
+            }
+        }
+
+        .some-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .list-item {
+                width: rem(187.5);
+                height: rem(187.5);
+                border: rem(1) solid $white;
+                display: flex;
+
+                @include media(">=tablet") {
+                    width: rem(250);
+                    height: rem(250);
+        
+                    @include media(">=desktop") {
+                        width: rem(375);
+                        height: rem(375);
+                    }
+                }
+
+                span {
+                    margin: auto;
+                    font-size: em(25);
+
+                    @include media(">=tablet") {
+                        font-size: em(50);
+            
+                        @include media(">=desktop") {
+                            font-size: em(100);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
